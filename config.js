@@ -4,6 +4,7 @@
 
 var debug = true;
 
+//Settings class is defined in websvr.js
 var WEBSVR_CONFIG = {
     /*
     * Parameters used for WebSvr

@@ -18,7 +18,11 @@ var fs          = require('fs')
   , client
   , config      = global.CONFIG = require(path.join('../', process.argv[2]))
 
-
+//<test>
+//console.log("config file's path == " + path.join('../', process.argv[2]));
+//result;config file's path == ../config.js
+//</test>
+//node ./svr/ourjs.js config.js //process.argv[2] == config.js
 /*
 * js library used for both front-end and back-end
 */
@@ -35,7 +39,7 @@ var WEBSVR_CONFIG   = config.WEBSVR_CONFIG
 var app = WebSvr(WEBSVR_CONFIG)
 
 //全局默认model: debug 为 true时使用未压缩合并的css/js
-app.model({ debug: WEBSVR_CONFIG.debug })
+app.model({ debug: WEBSVR_CONFIG.debug })  //{ debug: true }
 
 //改变默认模板引擎
 //app.engine(require("./doT").compile)
